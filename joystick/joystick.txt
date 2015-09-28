@@ -1,0 +1,35 @@
+attiny2313
+----------
+
+Pin 1	Reset
+Pin 2	RxD	---[
+Pin 3	TxD	---[
+Pin 4	PA1	LED1
+Pin 5	PA0	LED2
+Pin 6	PD2	J2-gn-left		Joystick J1 is on the right hand side viewed from fron.
+Pin 7	PD3	J2-pi-right
+Pin 8	PD4	J2-gr-up
+Pin 9	PD5	J2-or-down
+Pin 10	GND	----o		j+j+b+b+pow
+Pin 11	PD6	J2-wh-fire
+Pin 12	PB0	J1-gn-left		Joystick J1 is on the right hand side viewed from fron.
+Pin 13	PB1	J1-pi-right
+Pin 14	PB2	J1-gr-up
+Pin 15	PB3	J1-or-down
+Pin 16	PB4	OC1B	-> (+) 10uF (-) --> Speaker --> GND
+Pin 17	PB5	J1-wh-fire
+Pin 18	PB6	Pause-Button
+Pin 19	PB7	Reset-Button
+Pin 20	VCC	----o
+        
+Joystick
+--------
+1	up	gray
+2	down	orange
+3	left	green
+4	right 	pink
+5	--
+6	fire	white
+7		yellow
+8	GND 	blue
+9	--
