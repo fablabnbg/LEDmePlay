@@ -14,6 +14,9 @@
 #define SPEAKER_DDR  DDRB
 #define SPEAKER_BIT  (1<<PB4)
 
+#if (CPU_MHZ != 8)
+# error "must run at 8Mhz"
+#endif
 
 static uint16_t pitchval(uint8_t i)
 {
@@ -44,7 +47,7 @@ static void init_timer1()
   OCR1B = 1;	// 0 possible?
   TCCR1A = (0<<COM1A1)|(0<<COM1A0)|(0<<COM1B1)|(1<<COM1B0) | (0<<WGM11)|(0<<WGM10);
   // Prescaler=8 CS=0,1,0; prescaler=1 CS=0,0,1
-  TCCR1B = (0<<ICNC1)|(0<<ICES1) | (0<<WGM13)|(1<<WGM12) | (0<<CS12)|(0<<CS11)|(1<<CS10);
+  TCCR1B = (0<<ICNC1)|(0<<ICES1) | (0<<WGM13)|(1<<WGM12) | (0<<CS12)|(1<<CS11)|(0<<CS10);
   set_freq(0xff);
 }
 
